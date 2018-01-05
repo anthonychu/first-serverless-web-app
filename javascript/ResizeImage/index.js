@@ -11,11 +11,7 @@ module.exports = function (context, myBlob) {
                     context.done(error);
                 } else {
                     context.bindings.thumbnail = stream;
-                    context.done(null, {
-                        id: context.bindingData.name,
-                        imgPath: "/images/" + context.bindingData.name,
-                        thumbnailPath: "/thumbnails/" + context.bindingData.name
-                    });
+                    context.done();
                 }
             });
     });
